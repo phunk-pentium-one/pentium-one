@@ -8,13 +8,13 @@
   "icons": [
     {
       "src": "img/soto.png",
-      "sizes": "512x512",
+      "sizes": "650x650",
       "type": "image/png",
       "purpose": "any"
     },
     {
       "src": "img/soto.png",
-      "sizes": "512x512",
+      "sizes": "650x650",
       "type": "image/png",
       "purpose": "maskable"
     }
