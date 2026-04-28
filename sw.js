@@ -1,4 +1,4 @@
-const CACHE_NAME = "soto-it-v1";
+const CACHE_NAME = "soto-it-v2";
 const assets = [
   "./",
   "index.html",
