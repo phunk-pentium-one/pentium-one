@@ -39,7 +39,8 @@
 .about .card-thumb img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  max-width: 100%; /* SAKTI: Mencegah resolusi gambar asli meluber merusak grid */
+  object-fit: cover; 
 }
 .about .badge-eps {
   position: absolute;
@@ -94,34 +95,20 @@
 }
 
 /* Pengaturan untuk semua jenis ukuran HP dan Tablet */
+/* === 2. CARI KODE INI DI BAGIAN BAWAH (@MEDIA HP) === */
 @media (max-width: 768px) {
-  .about {
-    padding: 80px 4% 40px 4% !important;
-  }
-
-  /* Mengunci grid agar WAJIB membagi layar jadi 2 kolom ke samping */
   .about .grid-foto {
     display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important; 
-    gap: 12px !important; /* Jarak antar kotak kartu film */
+    grid-template-columns: repeat(2, 1fr) !important; /* Paksa 2 kolom */
+    gap: 12px !important;
   }
-  
-  /* Mengatur tinggi poster film agar pas mendatar di HP */
+
+  .about .card-item {
+    width: 100% !important; /* Memaksa kotak kartu pas dengan pembagian grid */
+  }
+
   .about .card-thumb {
-    height: 240px !important; 
-  }
-  
-  /* Mengecilkan teks judul sedikit agar pas di dalam kotak HP */
-  .about .card-info {
-    padding: 10px !important;
-  }
-
-  .about .card-info h3 {
-    font-size: 0.9rem !important; 
-    font-weight: 600 !important;
-  }
-
-  .about .card-info p {
-    font-size: 0.75rem !important;
+    width: 100% !important;
+    height: 200px !important; /* Mengunci tinggi poster di HP agar tidak raksasa */
   }
 }
